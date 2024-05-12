@@ -17,7 +17,7 @@ public class UserArrayDataAccessService implements UserDao{
     @Override
     public List<User> getUsers() {
         // Reading the users.csv file from the resource
-        File file = new File(Objects.requireNonNull(getClass().getClassLoader().getResource("user.csv")).getPath());
+        File file = new File(Objects.requireNonNull(getClass().getClassLoader().getResource("users.csv")).getPath());
         List<User> users = new ArrayList<>();
         try {
             try (Scanner scanner = new Scanner(file)) {

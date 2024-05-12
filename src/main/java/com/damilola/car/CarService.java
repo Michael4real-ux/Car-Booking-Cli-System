@@ -10,11 +10,7 @@ public class CarService {
     }
 
     public Car getCar(String regNumber){
-     return carDao.getCars().stream()
-             .filter(car -> car.getRegNumber()
-             .equals(regNumber))
-             .findFirst()
-             .orElse(null);
+     return carDao.getCars().stream().filter(car -> car.getRegNumber().equals(regNumber)).findFirst().orElse(null);
     }
 
     public List<Car> getAllCars(){
